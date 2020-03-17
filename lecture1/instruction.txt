@@ -1,0 +1,12 @@
+Intro to github
+1. git clone python-intro repository到自己的机器上
+复制github上clone or download按钮的地址
+2. 从command line打开vscode并创建hello_world.py
+安装vscode的链接: https://code.visualstudio.com/
+从vscode创建一个文件并打开的方法: code xxx
+3. 从command line运行get_sum.py, 尝试不同的argument组合
+(instruction见代码注释中的Usage)
+4. 试着利用已有代码，修改get_sum.py, 使得程序可以接受输入三个argument并计算它们的和
+(instruction见代码注释中的Usage)
+5. Commit并push代码
+6. 关于Python代码的compile过程的reading(顺便创建stackoverflow账号): https://softwareengineering.stackexchange.com/questions/313254/how-does-the-python-runtime-actually-work
