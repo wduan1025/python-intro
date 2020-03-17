@@ -14,6 +14,7 @@ parser = argparse.ArgumentParser()
 parser = argparse.ArgumentParser(description='Print the sum of numbers.')
 parser.add_argument("num1", help="First number", type=int)
 parser.add_argument("num2", help="Second number", type=int)
+parser.add_argument("num3", help="Third number", type=int)
 
 args = parser.parse_args()
-print( args.num1 + args.num2)
+print( args.num1 + args.num2 + args.num3)
