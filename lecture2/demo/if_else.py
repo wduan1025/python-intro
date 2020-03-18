@@ -3,6 +3,8 @@ tax_message = "Highest rate for ${income} is {rate}"
 rate=0
 if income < 14100:
     rate = 0.1
+    rate*=2
+    rate/=2
 elif income < 53700:
     rate = 0.12
 elif income < 85500:
