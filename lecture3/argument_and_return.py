@@ -4,7 +4,7 @@ def show_current_time():
     print(time.time())
 
 def get_current_time():
-    return(time.time())
+    return time.time()
 
 def set_guest_list(guest_list):
     guest_list.append("Jason")

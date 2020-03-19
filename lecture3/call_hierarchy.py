@@ -1,6 +1,7 @@
 
 def get_square_sum(l):
-    return sum(get_square(l))
+    x = get_square(l)
+    return sum(x)
 
 def get_square(l):
     return [i**2 for i in l]
