@@ -1,6 +1,7 @@
 l = [1,2,3,4]
 
 l_map1 = map(lambda x: x+2, l)
+print(l_map1)
 print(list(l_map1))
 
 def power_exp(x):

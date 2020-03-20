@@ -4,8 +4,11 @@ class Cat():
     age = 2
     owner = some_name
 
-cat = Cat()
-print(cat.name)
-cat.name = "James"
-print(cat.name)
-print("Owner of the cat is ", cat.owner)
+cat1 = Cat()
+print(cat1.name)
+cat1.name = "James"
+print(cat1.name)
+
+owner = "xxx"
+print(owner)
+print("Owner of the cat is ", cat1.owner)

@@ -1,8 +1,7 @@
 class Dog():
-    def __init__(self, name):
-        self.name = name
+    name="Adam"
 
-dog1 = Dog("Adam")
-dog2 = Dog("Adam")
+dog1 = Dog()
+dog2 = Dog()
 print(dog1)
 print(dog2)

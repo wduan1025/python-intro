@@ -1,6 +1,0 @@
-def bmicalculator(a,b):
-	return b/a
-
-a = bmicalculator(1.85,75)
-
-print(a)

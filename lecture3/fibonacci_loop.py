@@ -1,6 +1,6 @@
 num1 = 1
 num2 = 1
-n = 3
+n = 6
 for i in range(n-2):
     prev_num2 = num2
     num2 += num1
