@@ -1,5 +1,6 @@
 class Dog():
     def __init__(self, name, age):
+        print("In __init__ of Dog")
         self.name = name
         self.age = age
 
