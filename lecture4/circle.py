@@ -8,8 +8,9 @@ class Circle:
 
 circle = Circle()
 radius=5
-circle.set_radius(5)
+circle.set_radius(radius)
 print("Area of a radius={r} circle is {s}".format(r=radius, s=circle.get_area()))
 
 circle.pi = 666
 print("Area of a radius={r} circle is {s}".format(r=radius, s=circle.get_area()))
+

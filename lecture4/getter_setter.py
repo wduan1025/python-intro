@@ -10,6 +10,9 @@ class Dog():
     
     def get_name(self):
         return self.name
+    
+    def get_age(self):
+        return self.age
 
 dog = Dog()
 print("Dog initial name is ", dog.get_name())

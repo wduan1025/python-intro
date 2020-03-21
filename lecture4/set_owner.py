@@ -21,5 +21,6 @@ sophie.set_name("Sophie")
 print("Dog initial owner is ", dog.get_owner())
 dog.set_owner(sophie)
 print("Dog owner is ", dog.get_owner().get_name())
+
 dog.get_owner().set_name("Trevor")
 print("Now sophie's name is ", sophie.get_name())

@@ -13,4 +13,4 @@ print("Dog's name is ", dog.name)
 dog.name = "Charles"
 print("Dog's new name is ", dog.name)
 dog.set_name("Adam")
-print("Dog's lates name is ", dog.name)
+print("Dog's latest name is ", dog.name)

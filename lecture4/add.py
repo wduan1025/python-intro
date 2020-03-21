@@ -19,6 +19,7 @@ class Life:
         return result
 
 life1 = Life(1.2, 75)
+print(life1.xxx)
 life2 = Life(2, 60)
 combined = life1 + life2
 print("Combined life quality is ", combined.get_quality())

@@ -11,4 +11,9 @@ class cat():
     def mew(self):
         print("MewMew")
 
-def 
+    def make_sound(self, name):
+        print(name)
+        self.mew()
+
+c = cat()
+c.make_sound("xx")
