@@ -57,6 +57,10 @@ class Player():
     # Called in attack() and big_attack() when opponent HP
     # is lower than damage
     def die(self, a):
+        # When exit() is called, the program terminates.
+        # When exit("xxx") is called, program terminates with
+        # message "xxx" shown on screen
+        # Try it in python console
         exit("Player "+a.name+" died")
 
 class SmallMed:    
