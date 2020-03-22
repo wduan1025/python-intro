@@ -11,7 +11,8 @@ class Player():
     def attack(self,a):
         a.HP -= 10
         self.score += 20
-        return a.HP, self.score
+        return a.HP
+        return self.score
     def big_attack(self,a):
         a.HP -= 25
         self.power -= 10

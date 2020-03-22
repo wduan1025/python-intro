@@ -7,11 +7,11 @@ class Myset():
         result2 = self.a.remove(element)
         print(result2)
     def _sub_(self,l):
-        result = self.a.difference(l)
+        result = self.a - l
         return result
 
 l = {6,7,8,9,10}
 element = 7
 Myset().add(l)
 Myset().remove(element)
-print(Myset().a-l)
+print(Myset().a - l)
