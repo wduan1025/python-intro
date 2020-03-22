@@ -2,6 +2,7 @@ def global_make_sound():
     pass
 
 class animal:
+    
     def __init__(self, name):
         print("__init__ of animal")
         self.name = name
