@@ -43,7 +43,7 @@ class Player():
             return self.score
         else:
             print ("Not enough score")
-    if HP >= 100:
+    if HP >= 100:gi
         return 100
     if power <= 0:
         return 0
@@ -65,6 +65,8 @@ SP = S_Med.price
 LP = L_Med.price
 s = S_Med
 l = L_Med
+
+if med_size == s
 
 if red.HP <= 0:
     print("Died, blue win")

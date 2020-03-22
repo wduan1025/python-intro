@@ -5,6 +5,10 @@ class pet(animal):
     def __init__(self, name, owner_name):
         super().__init__(name)
         self.owner_name = owner_name
+
+    def introduce(self):
+        print("I'm a pet, my name is", self.name)
+
 class wild(animal):
     def __init__(self, name, num_caves):
         super().__init__(name)
@@ -13,11 +17,15 @@ class wild(animal):
 class flyable(animal):
     def fly(self):
         print(self.name, "is flying")
+    
+    def introduce(self):
+        print("I'm a flyable, my name is ", self.name)
+
 class runnable(animal):
     def run(self):
         print(self.name, "is running")
 
-class Parrot(pet, flyable):
+class Parrot(flyable, pet):
     pass
 class Dog(pet, runnable):
     pass
@@ -31,5 +39,6 @@ dog = Dog("Carol", "Dave")
 bat = Bat("Bruce", 2)
 rat = Rat("Henry", 3)
 
-dog.run()
-bat.fly()
+parrot.introduce()
+# dog.run()
+# bat.fly()

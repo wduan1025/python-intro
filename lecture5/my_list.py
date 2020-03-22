@@ -8,5 +8,5 @@ class MyList(list):
 a = MyList([1,2,3])
 b = MyList([1,4,5])
 print(a)
-print(a-b)
-print(b[2])
+# print(a-b)
+print(b[3])
