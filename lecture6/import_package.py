@@ -6,6 +6,6 @@ print(a)
 # a = x.complex(3,5)
 # print(a)
 
-# from complex.data import *
-# a = complex(7,9)
-# print(a)
+from complex.data import *
+a = complex(7,9)
+print(a)

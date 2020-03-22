@@ -1,3 +1,10 @@
+SL = 10
+LL = 30
+SP = 30
+LP = 50
+S_Med = Med(SL, SP)
+L_Med = Med(LL, LP)
+
 class Player():
     name = "unknown"
     HP = 100
@@ -18,18 +25,41 @@ class Player():
         self.score += 30
         return a.HP
         return self.power, self.score
-    def take_med(self):
-        if s in self.med_list:
+
+    def take_med(self, target_med):
+        if compare(target_med, S_Med):
+        # if med_size == s:
+            first_small_med_index = -1  
+            for i in range(len(self.med_list)):
+                if self.med_list[i].life == SL:
+                    first_small_med_index = i
+                    break
+            if first_small_med_index == -1:
+                return
+            self.med_list = self.med_list[:first_small_med_index] + self.med_list[first_small_med_index+1:]
             self.HP += SL
-            self.med_list.remove(s)
-            return self.med_list
-        elif l in self.med_list:
-            self.HP += LL
-            self.med_list.remove(l)
-            return self.med_list
-        else:
-            print("No Med Left")
-    def buy_med(self):
+        # self.med_list.remove(m)
+        # break
+        # if s in self.med_list:
+        #     self.HP += SL
+        #     self.med_list.remove(s)
+        #     return self.med_list
+        # elif l in self.med_list:
+        #     self.HP += LL
+        #     self.med_list.remove(l)
+        #     return self.med_list
+        # else:
+        #     print("No Med Left")
+    
+    # med_size should be "s" or "l"
+    def buy_med(self, med_size):
+        if med_size == "s":
+            if self.score < SP:
+                return
+            med = Med(SL, SP)
+            self.score -= SP
+            self.med_list.append(s)
+        
         if self.score > 30:
             self.med_list.append(s)
             self.score -= SP
@@ -46,7 +76,8 @@ class Player():
         return 100
     if power <= 0:
         return 0
-class Med():
+
+class Med:
     def _int_(self, life, price):
         self.life = life
         self.price = price
@@ -56,14 +87,10 @@ red= Player()
 red.set_name("red player")
 blue= Player()
 blue.set_name("blue player")
-S_Med = Med(10, 30)
-L_Med = Med(30, 50)
-SL = S_Med.life
-LL = L_Med.life
-SP = S_Med.price
-LP = L_Med.price
-s = S_Med
-l = L_Med
+
+
+def compare_med(m1, m2):
+    return m1.life == m2.life and m1.price == m2.price
 
 if red.HP <= 0:
     print("Died, blue win")

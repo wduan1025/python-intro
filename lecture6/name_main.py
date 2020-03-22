@@ -8,4 +8,5 @@ m = fibonacci(8)
 
 if __name__ == "__main__":
     n = 10
+    print(__name__)
     print(fibonacci(n))

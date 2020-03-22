@@ -14,11 +14,11 @@ class animal:
 
 class cat(animal):
     def make_sound(self):
-        print("Mew")
+        return "Mew"
 
 class dog(animal):
     def make_sound(self):
-        print("Woof")
+        return "Woof"
 
 cat1 = cat("Andrew")
 print(cat1.make_sound())
