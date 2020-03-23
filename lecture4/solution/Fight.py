@@ -43,7 +43,7 @@ class Player():
             return self.score
         else:
             print ("Not enough score")
-    if HP >= 100:gi
+    if HP >= 100:
         return 100
     if power <= 0:
         return 0

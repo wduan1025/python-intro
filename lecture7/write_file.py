@@ -1,3 +1,3 @@
-f = open("write_demo", "w")
+f = open("write_demo", "a")
 f.write("xxxx")
 f.close()

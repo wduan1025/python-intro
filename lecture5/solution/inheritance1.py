@@ -10,7 +10,7 @@ class meat(food):
     def __init__(self, name):
         super().__init__(name)
     def introduce(self):
-        print("I am", self.name ",considering as meat.")
+        print("I am", self.name, "considering as meat.")
 class vegetable(food):
     def __init__(self, name):
         super().__init__(name)
@@ -19,7 +19,7 @@ class vegetable(food):
 class delicious(food):
     def taste(self):
         print(self.name, "is delicious.")
-class awful(ingredients):
+class awful(food):
     def taste2(self):
         print(self.name, "tastes awful")
 

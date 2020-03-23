@@ -8,7 +8,7 @@ class Dog:
 
 dog = Dog()
 name = "Alice"
-# name = "xxx"
+name = "xxx"
 friend_idx = 4
 try:
     friends_of_friend = dog.friends[name]

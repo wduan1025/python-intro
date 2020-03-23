@@ -1,6 +1,6 @@
 f = open("friends_small", "r")
 content1 = f.read()
-print(content1)
+# print(content1)
 f.seek(1)
 content2 = f.read()
 print(content2)
