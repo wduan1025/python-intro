@@ -6,9 +6,9 @@ r = http.request('GET', URL)
 print(r)
 print(r.status)
 content = r.data
-# print(type(content))
+print(type(content))
 content = content.decode('utf-8')
-# print(type(content))
+print(type(content))
 with open("ny_corona.txt", "w") as f:
     f.write(content)
 # print(content)
