@@ -28,23 +28,21 @@ class WebCrawler:
                 r = self.manager.request('GET', url)
                 if not r.status == 200:
                     continue
+                content = r.data
+                if content is None:
+                    return
+                content = content.decode('utf-8')
+                self.contents[url] = content
+                if len(self.contents) > self.max_num_urls:
+                    return
+                out_links = self.get_out_links(content)
+                for link in out_links:
+                    self.get_page_content(link, recursion_level+1)
                 break
             except KeyboardInterrupt:
                 break
             except:
                 continue
-        if r is None:
-            return
-        content = r.data
-        if content is None:
-            return
-        content = content.decode('utf-8')
-        self.contents[url] = content
-        if len(self.contents) > self.max_num_urls:
-            return
-        out_links = self.get_out_links(content)
-        for link in out_links:
-            self.get_page_content(link, recursion_level+1)
 
     # Get links(wrapped by <a> and </a> in html content)
     # returns a list of string, each is a url
