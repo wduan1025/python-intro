@@ -7,10 +7,11 @@ class WebCrawler:
     max_try = 3
     max_num_urls = 1000
 
-    def __init__(self, initial_url, levels):
+    def __init__(self, initial_url, manager, levels):
         self.initial_url = initial_url
         self.contents = {}
         self.max_recursion_levels = levels
+        self.manager = manager
 
     def run(self):
         self.get_page_content(self.initial_url, 0)
@@ -20,13 +21,18 @@ class WebCrawler:
             return
         r = None
         for i in range(self.max_try):
-            if i > 0:
-                pass
-                # print("Try to send get request to ", url, "for the", i+1, "time")
-            r = http.request('GET', url)
-            if not r.status == 200:
+            try:
+                if i > 0:
+                    pass
+                    # print("Try to send get request to ", url, "for the", i+1, "time")
+                r = self.manager.request('GET', url)
+                if not r.status == 200:
+                    continue
+                break
+            except KeyboardInterrupt:
+                break
+            except:
                 continue
-            break
         if r is None:
             return
         content = r.data
@@ -50,7 +56,7 @@ class WebCrawler:
 if __name__ == "__main__":
     http = urllib3.PoolManager()
     start_url = 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases'
-    crawler = WebCrawler(start_url, 3)
+    crawler = WebCrawler(start_url, http, 2)
     crawler.get_page_content(start_url, 0)
     print(crawler.contents.keys())
     print("Got content of ", len(crawler.contents), "pages")
